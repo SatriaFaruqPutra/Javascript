@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1 id="jam">waktu</h1>
+        <button onclick="halo()">klik</button>
+        
+        <button onclick="waktu()">waktu</button> 
+        
+        <br> <br>
+
+        <input type="number" id="tanggal" placeholder="tanggal"><br> <br>
+        <input type="number" id="bulan" placeholder="bulan">
+        <h1 id="zodiak">zodiak</h1>
+        <button onclick="zodiak()">zodiak</button>  <br><br>
+
+        <h1>KALKULATOR</h1>
+        <h1 id="hasil">hasil</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2"><br>
+        <button onclick="kali()">Perkalian</button><br>
+        <button onclick="jumlah()">Penjumlahan</button><br>
+        <button onclick="kurang()">Pengurangan</button><br>
+        <button onclick="bagi()">Pembagian</button>
+
+        <h1 id="saya">Nama saya</h1>
+        <input type="text" id="nama">
+        <button onclick="nama()">nama saya</button>
+    </div>
+    <script>
+        function halo (){
+            alert("halo javascript")
+        }
+        function waktu (){
+            document.getElementbyid('jam').innerHTML=Date();
+        }
+        function zodiak(){
+            let tanggal = document.getElementById('tanggal').value;
+            let bulan = document.getElementById('bulan').value;
+            let zodiak = "tidak ada"
+            if (bulan==1) {
+                if (tanggl > 0 && tanggal < 20) {
+                    zodiak = "taurus";
+                }
+                if (tanggal > 19 && tanggal < 32)
+                    zodiak = "capricon";
+            }
+            else if (bulan==2) {
+                if (tanggl > 0 && tanggal < 20) {
+                    zodiak = "caprikon";
+                }
+                if (tanggal > 19 && tanggal < 32)
+                    zodiak = "aquarius";
+                
+            }
+            else if (bulan==3) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "aquarius";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "leo"
+                }
+            }
+            else if (bulan==4) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "leo";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "sagitarius"
+                }
+            }
+            else if (bulan==5) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "sagitarius";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "aries"
+                }
+            }
+            else if (bulan==6) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "aries";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "pisces"
+                }
+            }
+            else if (bulan==7) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "pisces";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "scorpio"
+                }
+            }
+            else if (bulan==8) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "scorpio";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "gemini"
+                }
+            }
+            else if (bulan==9) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "gemini";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "cancer"
+                }
+            }
+            else if (bulan==10) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "cancer";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "virgo"
+                }
+            }
+            else if (bulan==11) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "virgo";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "libra"
+                }
+            }
+            else if (bulan==12) {
+                if (tanggal > 0 && tanggal < 20) {
+                    zodiak = "libra";
+                } 
+                if (tanggal > 19 && tanggal < 32) {
+                    zodiak = "taurus"
+                }
+            }
+            document.getElementById('zodiak').innerHTML=zodiak;
+
+
+        }
+        function kali () {
+            let a = document.getElementById('bil1').value;
+            let b = document.getElementById('bil2').value;
+            let hasil = a*b;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function jumlah () {
+            let a = parseInt(document.getElementById('bil1').value); 
+            let b = parseInt(document.getElementById('bil2').value);
+            let hasil = a+b;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function kurang () {
+            let f = document.getElementById('bil1').value;
+            let g = document.getElementById('bil2').value;
+            let hasil = f-g;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function bagi () {
+            let u = document.getElementById('bil1').value;
+            let i = document.getElementById('bil2').value;
+            let hasil = u/i;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function nama() {
+            document.getElementById('saya').innerHTML = document.getElementById('nama').value;
+        }
+    
+
+    </script>
+</body>
+</html>

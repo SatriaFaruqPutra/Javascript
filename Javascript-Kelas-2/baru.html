@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar javascript</title>
+</head>
+<body>
+    <h1 id="ganti">belajar javascript</h1>
+    <button onclick="halo()">javascript</button>
+
+    <br><br>
+
+    <h1 id="aku">namaku</h1>
+    <input type="text" id="nama" placeholder="namamu"> 
+    <button onclick="Nama()">nama</button>
+
+    <br><br>
+
+    <input type="number" id="bil1" placeholder="bilangan 1"><br>
+    <input type="number" id="bil2" placeholder="bilangan 2">
+    <h1 id="hasil">hasil</h1>
+    <button onclick="jumlah()">Penjumlahan</button>
+    <script>
+        function halo() {
+            document.getElementById('ganti').innerHTML="halo";
+        }
+
+        function Nama() {
+            document.getElementById('aku').innerHTML = document.getElementById('nama').value;
+        }
+        function jumlah() {
+            let a = parseInt(document.getElementById('bil1').value);
+            let b = parseInt(document.getElementById('bil2').value);
+            let hasil = a+b;
+
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+    </script>
+</body>
+</html>
